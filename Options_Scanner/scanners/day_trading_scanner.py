@@ -6,7 +6,7 @@ import logging
 from datetime import datetime, timedelta
 from typing import Dict, List, Any, Optional
 
-from api.thetadata_client import ThetaDataClient
+from api.thetadata_client import SimplifiedThetaDataClient
 from db.models import OpportunityModel
 from notifications.telegram_bot import TelegramBot
 from analysis.trade_analyzer import TradeAnalyzer
