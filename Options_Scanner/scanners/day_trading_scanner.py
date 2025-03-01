@@ -6,7 +6,7 @@ import logging
 from datetime import datetime, timedelta
 from typing import Dict, List, Any, Optional
 
-from api.thetadata_client import SimplifiedThetaDataClient
+from api.thetadata_client import SimplifiedThetaDataClient  # Updated import
 from db.models import OpportunityModel
 from notifications.telegram_bot import TelegramBot
 from analysis.trade_analyzer import TradeAnalyzer
@@ -19,7 +19,7 @@ class DayTradingScanner:
     
     def __init__(
         self, 
-        thetadata_client: ThetaDataClient,
+        thetadata_client: SimplifiedThetaDataClient,  # Updated parameter type
         opportunity_model: OpportunityModel,
         watchlist: List[str],
         telegram_bot: Optional[TelegramBot] = None,
